@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table,tr, td{
+            border: 0px solid black;
+            padding: 5px 10px;
+        }
+        input, select{
+            padding: 5px;
+            width: 200px;
+        }
+​
+    </style>
+</head>
+<body>
+    
+    <form>
+        <table>
+            <tr>
+                <td>Amount</td>
+                <td>From </td>
+                <td>To</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="amount">
+                </td>
+                <td>
+                    <select id="fromId" name = "From currency">
+                        <option value="USD">USD</option>
+                        <option value="VNĐ">VNĐ</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="toId" name = "From currency">
+                        <option value="USD">USD</option>
+                        <option value="VNĐ">VNĐ</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Convert" onclick="convert()" >
+                </td>
+            </tr>
+        </table>
+        <p id="result"></p>
+    </form>
+    <script>
+        function convert(){
+            let from = document.getElementById("fromId");
+            let to = document.getElementById("toId");
+            let amount = document.getElementById("amount");
+            
+            if(from.value == 'USD'){
+                if(to.value == 'USD'){
+                    document.getElementById('result').innerHTML = 'Result: ' + amount.value + ' ' + to.value;
+                }
+                else{
+                    document.getElementById('result').innerHTML = 'Result: ' + (amount.value * 23000) + ' ' + to.value;
+                }
+            }
+            else{
+                if(to.value == 'USD'){
+                    document.getElementById('result').innerHTML = 'Result: ' + (amount.value / 23000) + ' ' + to.value;
+                }
+                else{
+                    document.getElementById('result').innerHTML = 'Result: ' + amount.value + ' ' + to.value;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
