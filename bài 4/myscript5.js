@@ -23,5 +23,4 @@ function convertmoney(){
             }}
         
 document.getElementById("result")= result ;
-
-}
+        }
