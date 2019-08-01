@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table,tr,td{
+            border:1px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <tr>
-        <td>Caculotor</td> <br>
- 
-    </tr>
-    <tr>
-        <td>
-            <input id = "a">
-        </td>
-        <td>
-            <input id ="b"> <br>
-        </td>
-    </tr>
-    <tr>
-        <button onclick="addition()">addition(+)</button>
-        <button onclick="subtraction()">subtraction(-)</button>
-        <button onclick="multiplication()">multiplication (X)</button>
-        <button onclick="division()">division (/)</button>
-        
-
-                <p id ="result"></p>
-      
-        <script>
+    <table>
+        <tr>
+            <td colspan="2" >Caculotor</td>
+        </tr>
+        <tr>
+            <td>
+                <input id = "a">
+            </td>
+            <td>
+                <input id ="b"> <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="addition()">addition(+)</button>
+                <button onclick="subtraction()">subtraction(-)</button>
+                <button onclick="multiplication()">multiplication (X)</button>
+                <button onclick="division()">division (/)</button>
+            </td>
+        </tr>     
+    </table>
+    <p id ="result"></p>
+    <script>
         function addition(){
             let n1=+document.getElementById("a").value;
             let n2=+document.getElementById ("b").value;
@@ -41,17 +51,18 @@
             document.getElementById("result").innerHTML ="ket quả la:" +(n1 -n2) ;
 
         }
+
         function multiplication(){
             let n1=+document.getElementById("a").value;
             let n2=+document.getElementById ("b").value;
             document.getElementById("result").innerHTML ="ket quả la:" +(n1 * n2) ;
         }
+
         function division(){
             let n1=+document.getElementById("a").value;
             let n2=+document.getElementById ("b").value;
             document.getElementById("result").innerHTML ="ket quả la:" +(n1 / n2) ;
         }
-        </script>
-    </tr>
+    </script>
 </body>
 </html>
