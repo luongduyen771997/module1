@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bongcuaduyen</title>
+</head>
+<body>
+    <img src="bong.png" style="position:relative; left:0px ;top :0px" id = "ball"><br>
+    <input type="button" value = "clickme" onclick="moveright()">
+    <script>
+        function moveright(){
+            let a = document.getElementById('ball');
+            a.style.left = parseInt(a.style.left) + 100 + 'px'
+        }
+    </script>
+</body>
+</html>
