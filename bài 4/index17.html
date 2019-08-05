@@ -13,32 +13,35 @@
     <script>
         function docready() {
             let month = +document.getElementById('sothang').value;
+            // let message = "nhập sai";
             switch (month) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                document.getElementById('kq').innerHTML = 'tháng '  + month + ' có 30 ngày'
-                break;
-            case 2:
-                docready.getElementById('kq').innerHTML = 'tháng ' + month + ' có 28 hoặc 29 ngày'
-                break;
-            case 2:
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                document.getElementById('kq').innerHTML = 'tháng ' + month + ' có 30 ngày'
-                break;
-            default:
-            alert ('nhập sai');
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                {
+                    message = 'tháng '  + month + ' có 30 ngày'
+                    break;
+                }
+                case 2:
+                {
+                    message = 'tháng ' + month + ' có 28 hoặc 29 ngày'
+                    break;
+                }
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    message = 'tháng ' + month + ' có 30 ngày'
+                    break;
+                default:
+                    break;
             }
+            document.getElementById('kq').innerHTML = message;
         }
-
-        
     </script>
 </body>
 </html>
