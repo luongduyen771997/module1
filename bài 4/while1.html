@@ -8,12 +8,14 @@
 </head>
 <body>
     <script>
-        let num = prompt ("nhập số bất kì");
+        let num = parseInt(prompt('enter number'));
         let total = 0;
-        for (i=0;i<=num;i++) {
-            total +=i
-            alert (total);
+        while (num != -1) {
+            num = parseInt(prompt('enter number'));
+            alert(num);
+            total += num;   
         }
+        alert(total);
     </script>
 </body>
 </html>
