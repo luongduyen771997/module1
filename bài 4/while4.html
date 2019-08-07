@@ -8,16 +8,17 @@
 </head>
 <body>
     <script>
-        let num = 0;
-        let total = 0;
-        while (num != -1) {
-            num = parseInt(prompt('enter number'));
-             if(num != -1)
-             total += num;  
-        }
-      
-        alert(total);
+        let value =null;
+        do {
+            value=prompt('enter number from 1 to 10');
+        } while ( value <1 ||value > 10);
+            document.write ('so ban nhap vao la' + value );
 
+
+        
+        
+
+        
     </script>
 </body>
 </html>
