@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="play()">play</button>
+    <script>
+         function play(){
+            let a=prompt('nhap so tu 1 den 10');
+            for(let i=0;i<10;i++){
+                if(a<=3) {
+                    alert('so hoi be nhập lại')
+                }else if (a>=5){
+                    alert('so ban nhao hoi lớn nhập lại')
+                }else alert ('chính xác');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

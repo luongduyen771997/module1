@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        for(let i=1;i<100;i++){
+            let isMul3 = i%3 === 0;
+            let isMul5 = i%5 === 0;
+            let isDivBoth = (i%3 === 0) && (i%5 === 0)
+
+            if(isDivBoth) {
+                document.write('FB <br>');
+            } else {
+                if(isMul3) {
+                    document.write('Fizz <br>');
+                } else {
+                    if(isMul5) {
+                        document.write('Buzz <br>');
+                    } else {
+                        document.write(i + ' <br>');
+                    }
+                }
+            }
+        }
+            
+        
+    </script>
+</body>
+</html>
