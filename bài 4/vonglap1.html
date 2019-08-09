@@ -8,17 +8,17 @@
 </head>
 <body>
     <script>
-        var a = {
-  foo: 'bar'
-};
-
-var b = {
-  foo: 'bar'
-};
-
-console.log(a === b);
+        let x1=0;
+        let x2=1;
+        let fibo;
+        document.write('0,1')
+        for (let i=0;i<50;i++){
+            document.write(',')
+            fibo=x1 + x2
+            document.write(fibo)
+            x1=x2
+            x2=fibo
+        }
     </script>
-    <!-- <script src="myscript.js">
-    </script> -->
 </body>
 </html>
