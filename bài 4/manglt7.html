@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=[];
+        function impromt(){
+            for (i=0;i<10;i++){
+                array[i]=Math.floor(Math.random()*20);
+            }
+            document.write(array);
+        }
+        
+        function check(v,array){
+            for (let i=0;i<array.length;i++){
+                if (v === array[i]){
+                    return i;
+                }
+            }
+            return false;
+        }
+    
+        function Delete(index){
+            for(let i = index;i<array.length-1;i++){
+                array[i]=array[i+1]
+            }
+            array[array.length-1]=0
+        }
+
+        impromt();
+        let v = +prompt('nhập v');
+        let index = check(v,array);
+        if(index){
+            Delete(index);
+        }else alert('không có v')
+   
+        document.write('=>'+array);
+       
+       
+        
+    </script>
+</body>
+</html>

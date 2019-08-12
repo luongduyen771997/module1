@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addTo(){
+            for(let i=0;i<10;i++){
+                array[i]=Math.floor(Math.random()*10)
+            }
+            document.write(array)
+        }
+
+        let array=[];
+        addTo();
+        let message = array;
+        array.sort(function(a,b){
+            return b-a
+        });
+    
+        document.write('</br>'+ array);
+
+       
+    </script>
+</body>
+</html>
