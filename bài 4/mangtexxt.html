@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>Type Anything Slowly</h1>
+<input type="text" onkeydown="typetext()" height="40" width="50">
+
+<body>
+    <script>
+    let array=["T","Ô","I"," ","L","À"," ","Đ","Ồ"," ", "N","G","Ố","C"," ","!!!"];
+    let result=[];
+    function typeText(){
+        for (let i=0;i<=array.length;i++){
+            if (i<array.length){
+                result.push(array[i]);
+            }
+        }
+        document.write(result)
+
+    }
+    </script>
+</body>
+</html>
+
+
+<html>
+    
+
+   

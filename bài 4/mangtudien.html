@@ -7,22 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="name">
+    <input type="text" id="name" >
     <button onclick="lookup()">seach</button>
     <div id="kq"></div>
     <script>
-        let find=document.getElementById('name').value;
-        let eng=["dog","cat","chicken","duck","fish","pig","rabbit"];
-        let vie=["chó","mèo","gà","vịt","cá","heo","thỏ"];
-        function lookup(){
-            for (let i=0;i<eng.length;i++){
-                if (find===eng[i]){
-                  document.getElementById('kq').innerHTML=vie[i]
-                    break;
-            }else {document.getElementById('kq').innerHTML=('không có')}
-            break;
-        }
-        }
+       function lookup(){
+            let find=document.getElementById("name").value;
+            let eng=["dog","cat","chicken","duck","fish","pig","rabbit"];
+            let vie=["chó","mèo","gà","vịt","cá","heo","thỏ"];
+                for(let i=0;i<eng.length;i++){
+                    if (find===eng[i]){
+                     document.getElementById('kq').innerHTML=vie[i]
+                     break;
+                    }else {document.getElementById('kq').innerHTML=('không có')}
+                }     
+       }    
+           
        
         
     </script>

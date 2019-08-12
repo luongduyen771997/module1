@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <input type="button" value="addto" onclick="add()">
+    <input type="button" value="checkmax" onclick="check()">
+    <input type="button" value="avg" onclick="avg()">
+    <p id="kq"></p>
+    <script>
+    let array=[];
+    let max=[array[0]];
+    
+    
+    function add(){
+        array.push(parseInt(document.getElementById("input").value))
+        console.log(array);
+    }
+    
+    
+    function check(){
+        for(let i=0;i<array.length;i++){
+            if(array[i]>max){
+                max=array[i]
+                index=i
+        }
+        document.getElementById("kq").innerHTML='max là ' + max
+        }
+    }
+    
+    
+    function avg(){
+        let sum=0;
+        let tb=0;
+        for(j=0;j<array.length;j++){
+            sum+=parseInt(arr[j])
+            tb=sum/j
+        }
+        document.getElementById("kq").innerHTML='trung binh là ' +tb
+    }
+    </script>
+</body>
+</html>
