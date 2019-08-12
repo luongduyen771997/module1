@@ -7,21 +7,31 @@
     <title>Document</title>
 </head>
 <h1>Type Anything Slowly</h1>
-<input type="text" onkeydown="typetext()" height="40" width="50">
+<form>
+    <textarea  type="text" row = "10" col = "40"  id="text"  onkeydown="typetext()"></textarea>
+</form>
 
 <body>
     <script>
     let array=["T","Ô","I"," ","L","À"," ","Đ","Ồ"," ", "N","G","Ố","C"," ","!!!"];
-    let result=[];
-    function typeText(){
-        for (let i=0;i<=array.length;i++){
-            if (i<array.length){
-                result.push(array[i]);
+    let n='';
+    function typetext(){
+        t=document.getElementById('text').value;
+        j=t.length
+        if (j>0){
+            for (let i=0;i<j;i++){
+                n = n + array[i];
+                if(i == array.length){
+                    document.getElementById('text').value ='';
+                    n='';
+                }
             }
         }
-        document.write(result)
-
+        // document.getElementById('text').value = n;
+        n="";
+        setTimeout("typetext()", 1);
     }
+    
     </script>
 </body>
 </html>

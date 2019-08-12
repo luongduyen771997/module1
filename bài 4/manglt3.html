@@ -36,12 +36,12 @@
     
     function avg(){
         let sum=0;
-        let tb=0;
+        let avg=0;
         for(j=0;j<array.length;j++){
-            sum+=parseInt(arr[j])
-            tb=sum/j
+            sum+=parseInt(array[j])
         }
-        document.getElementById("kq").innerHTML='trung binh là ' +tb
+            avg=sum/array.length
+        document.getElementById("kq").innerHTML='trung binh là ' +avg;
     }
     </script>
 </body>
