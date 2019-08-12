@@ -7,14 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="text">
+    <input type="number" name="" id="text">
+    <input type="text" id="v">
     <button onclick="addto()">addto</button>
     <button onclick="check()">check</button>
     <p id="kq"></p>
     <script>
         let array=[];
         function addto(){
-            array.push(parseInt(document.getElementById('text').value))
+            array.push(parseInt(document.getElementById('text').value));
+            document.getElementById('text').value = '';
             console.log(array);
         }
         function check(){

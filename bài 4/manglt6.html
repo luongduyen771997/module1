@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="number" name="" id="text">
+        <input type="text" id="v">
+        <button onclick="addto()">addto</button>
+        <button onclick="check()">check</button>
+        <p id="kq"></p>
+        <script>
+            let array=[];
+            function addto(){
+                array.push(parseInt(document.getElementById('text').value));
+                document.getElementById('text').value= '';
+                
+            }
+
+            function check(){
+                debugger;
+               let n=document.getElementById('v').value;
+                for(let i=0;i<array.length;i++){
+                    if (n==array[i]){
+                        document.getElementById('kq').innerHTML='"V is in the array'
+                        return;
+                    } 
+                }
+
+                document.getElementById('kq').innerHTML="V is not in the array"
+            }
+
+           
+        </script>
+</body>
+</html>
