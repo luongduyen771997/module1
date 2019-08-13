@@ -7,19 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-   
-
     <script>
-        let num=prompt('nhập chuỗi');
-        let str=num.toString();
-        let array =[];
-        let dn=[];
-        for (let i =0;i<str.length;i++){
-           array.push(str[i]);
+        let obj=prompt('nhập chuỗi');
+        let dem=0;
+        obj.trim()
+        for(let i=0;i<obj.length-1;i++){
+            if(obj[i]==' ' && obj[i+1]!=' '){
+                dem=dem+1
+            }
         }
-        document.write(array);
-        // dn=array.reverse();
-        // document.write(dn);
+        document.write(obj + ' so phan tu la ' + dem)
+       
+   
+       
     </script>
 </body>
 </html>

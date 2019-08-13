@@ -9,16 +9,16 @@
 <body>
     <h1>Caro Game Simple</h1>
     <p  id="carogame"></p>
-    <input type="button" value="change value" onclick="changevalue()">
+    <input type="button" value="change value" onclick="changevalue()"><br>
     <script>
         let array =new Array (5);
         for (let i=0;i<array.length;i++){
             array[i]=new Array(5) 
-            for (let j=0;j<array.length;j++){
-                array[i][j]=('0')
+            for (let j=0;j<array[i].length;j++){
+                array[i][j]= 0
                 document.write(array[i][j]);
             }
-            document.write(array);
+            document.write("<br>");
         }
 
     </script>
