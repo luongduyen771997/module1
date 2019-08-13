@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document(cho phép viết vòng for)</title>
+</head>
+<body>
+    <script>
+        let str = "abc212cba"
+        let j=str.length
+        function isPalindrome(){
+            for(let i=0;i<j;i++){
+                if(str[i]===str[j-1]){
+                j--
+                alert('doi xung');
+            }else alert(' khong doi xung');
+            }  
+        }
+         
+        isPalindrome();
+
+        function sum(n){
+            if(n == 1)
+                return 1;
+            return n + sum(n-1); 
+        }
+        document.write("Sum from 1 to 20 is: " + sum(20));
+    </script>
+</body>
+</html>

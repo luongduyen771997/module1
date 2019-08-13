@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number"  oninput="checkIsPrime(this.value)">
+    <p id="kq"></p>
+    <script>
+        function checkIsPrime(num){
+            if(num<=0)
+            {
+                alert('nhập sai nhập lại');
+            }
+            else
+            {
+                if(isPrime(num))
+                {
+                    alert('is prime');
+                }
+                else 
+                {
+                    alert ('not is prime');
+                }
+            }  
+            
+        }
+
+        function isPrime(num){
+            for(let i=2;i<(num-1);i++){
+                if(num % i===0) 
+                    return false;
+            }
+            return true;
+        }
+        for(let j =2;j<1000;j++){
+            if(checkIsPrime(j)){
+                document.write(j+' ; ');
+            } 
+        }
+        
+    </script>
+</body>
+</html>

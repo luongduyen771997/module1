@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label>meters</label>
+            <input type="number" oninput="changemeters(this.value)">
+            <p>feet: <span id="kq"></span></p> <br>
+        </p>
+        <p>
+            <label>feet</label>
+            <input type="number" oninput="changefeet(this.value)">
+            <p>meters: <span id="kq1"></span></p>
+        </p>
+            
+    </form>
+    <script>
+        function changemeters(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("kq").innerHTML = 3.279 * valNum 
+        }
+        function changefeet(valnum1){
+            valnum1=parseFloat(valnum1);
+            document.getElementById('kq1').innerHTML=0.305 * valnum1
+        }
+    </script>
+</body>
+</html>
