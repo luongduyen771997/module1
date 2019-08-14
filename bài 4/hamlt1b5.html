@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body oninput="find()">
+    <script>
+        let arr1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair" ,"Dubhe và Regulus"];
+        let arr2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major và Leo"];
+        let input=prompt('nhập tên ngôi sao');
+
+        function find(arr1,input,arr2){
+            let output = arr1.indexOf(input);
+            if (output!== -1){
+            alert('ngôi sao '+ arr1[output]+ '==>' +' là chòm sao ' + arr2[output]);
+            }else alert ('không tim thấy');
+        }
+        find(arr1,input,arr2);
+
+        
+    </script>
+</body>
+</html>
