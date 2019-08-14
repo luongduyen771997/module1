@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Document(cho phép viết vòng for)</title>
 </head>
 <body>
     <script>
-        let str =prompt('nhập chuỗi');
-        function check(first,last){
-            if(first>last){
-                return false
-            };
-          
-            if (str[first] === str[last]) {
-                return check(first + 1, last - 1);                
-            
-            }else {
-                return false;
-            }
-        }   
-            if(check(0,str.length-1)){
-                alert ('doi xung');
-            }else alert (' khong doi xung ');
+        let str = prompt('nhập chuỗi bất kỳ');
+        let j=str.length;
+        function isPalindrome(){
+            for(let i=0;i<j;i++){
+                if(str[i]===str[j-1]){
+                j--
+                alert('doi xung');
+            }else alert(' khong doi xung');
+            }  
+        }
+        isPalindrome();
     </script>
 </body>
 </html>
