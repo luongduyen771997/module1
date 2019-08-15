@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hinhchunhat</title>
+    
+</head>
+<body>
+    <script>
+        let num1=+prompt('nhâp chiều dài');
+        let num2=+prompt('nhập chiều rộng ');
+   class Rectangle {
+       constructor (width,height){
+           this.chieudai=width;
+           this.chieurong=height;
+       }
+        getWidth(){
+            return chieudai;
+        }
+        getHeight(){
+            return chieurong;
+        }
+        setWidth(width){
+            this.chieudai=width;
+        }
+        setHeight(height){
+            this.chieurong=height;
+        }
+        getArea(){
+            let dientich=this.chieudai*this.chieurong;
+        return dientich;    
+        }
+        getperimeters(){
+            let perimeters=(this.chieudai+this.chieurong)/2;
+            return perimeters;
+        }
+        createCanvas(){
+            let canvas = document.createElement("canvas");
+            
+            canvas.Width= 1000;
+            canvas.Height= 800;
+            canvas.style = "border: 1px solid red;";
+            let context= canvas.getContext("2d");
+            context.rect(0, 0, this.chieudai, this.chieurong);
+            context.stroke();
+            document.body.insertBefore(canvas,document.body.firstChild);
+        }
+   }
+   let result=new Rectangle();
+   result.setWidth(num1);
+   result.setHeight(num2);
+   result.getArea();
+   result.getperimeters();
+   document.write('diện tích là ' +result.getArea()+ ' chu vi là '+ result.getperimeters() );
+   result.createCanvas();
+    </script>
+</body>
+</html>

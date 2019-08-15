@@ -27,7 +27,7 @@ function editProduct(abc) {
 	    for (var j = 0; j <t; j++) {		
 		if (product[abc] == product[j]) {
 			product[j] = name;
-			// console.log(product[abc]);
+		
 		}
 	}
 	Display();

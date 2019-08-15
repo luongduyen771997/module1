@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(c,f,kenvin){
+                this.doC=c;
+                this.doF=f;
+                this.dokenvin=kenvin;
+            }
+            getdoC(){
+                return doC;
+            }
+            setdoC(c){
+                this.doC=c;
+
+            }
+           
+           
+            getchangeF(){
+                let F = this.doC*1.8+32;
+                return F;
+            }
+            getchangeKenvin(){
+                let K =this.doC + 273 ;
+                return K;
+            }
+        }
+     let rs=new Temperature()
+     let num=+prompt('nhập độ C');
+     rs.setdoC(num)
+
+    
+     console.log(rs.getchangeF());
+     console.log(rs.getchangeKenvin());
+    </script>
+</body>
+</html>

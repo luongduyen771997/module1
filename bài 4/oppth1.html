@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let     MyDate= function(date,month,year){
+            this.date=date;
+            this.month=month;
+            this.year=year;
+            this.getDate=function(){
+                return this.date;
+            },
+            this.getmonth=function(){
+                return this.month;
+            },
+            this.setmonth=function(thang){
+                this.month=thang;
+            this.year=function(){
+                return year;
+            }
+            this.setyear=function(nam){
+                this.year=nam;
+            }
+
+            }
+            this.setDate=function(date){
+                this.date=date;
+            }
+            
+        }
+        var ngay = new MyDate(3,4,5);
+        console.log(ngay);
+        var ngayt2=new MyDate();
+        ngayt2.setDate("thu 2");
+        console.log(ngayt2);
+        class animal{
+            constructor(ten,tuoi){
+                this.Name=ten;
+                this.Age=tuoi;
+
+            }
+            setName(ten){
+                
+            }
+        }
+        </script>
+</body>
+</html>
