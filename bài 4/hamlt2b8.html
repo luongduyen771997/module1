@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num =prompt('nhập mảng số nguyên bất kì');
+    let str =num.toString();
+    let arr=[];
+    function add(b){
+        for(let i=0;i<=str.length;i++){
+            arr.push(str[i]);
+        }
+        return arr;
+    }
+    add(str);
+    
+    function dn(a){
+        let rs=arr.reverse();
+        return rs ;
+    }
+    let kq=dn(arr);
+    document.write('mảng đảo ngược là ' + kq);
+    </script>
+</body>
+</html>

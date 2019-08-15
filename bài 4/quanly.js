@@ -4,8 +4,11 @@ let data = '';
 let t =product.length;
 
 function Display() {	
-	for (var i = 0; i<t; i++) {
-        data += "<tr><td id='nameProduct'> " + product[i] + "</td><td><button class='btn btn-success' onclick='editProduct("+i+")'>Edit</button></td><td><button class='btn btn-success' onclick='delProduct("+i+")'>Delete</button></td></tr>";
+	for (var i = 0; i<=t; i++) {
+		data += "<tr><td id='nameProduct'> " 
+		+ product[i] + 
+		"</td><td><button onclick='editProduct("+i+")'>Edit</button></td>"+
+		"<td><button onclick='delProduct("+i+")'>Delete</button></td></tr>";
 	}document.getElementById('table').innerHTML = data;	                                     
     
     }document.getElementById('table').innerHTML = data;	

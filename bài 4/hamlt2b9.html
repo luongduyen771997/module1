@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt('nhập mảng bất kì');
+        let temp   = prompt('nhập kí tự bất kì')
+        let arr = [];
+        function add(a){
+            for ( let i=0;i<=str.length;i++){
+                arr.push(str[i]);
+            }
+        }
+        add(str)
+        function find(b){
+            for (let j=0;j<=arr.length;j++){
+                if(arr.indexOf(temp)){
+                    let dem=dem+1;
+                    return dem ;
+                } 
+            }
+            return -1 ;
+        }
+        let kq=find(arr);
+        document.write('số lần xuất hiện của ' + temp + 'là ' +kq);
+    </script>
+</body>
+</html>
