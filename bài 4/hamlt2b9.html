@@ -9,25 +9,27 @@
 <body>
     <script>
         let str = prompt('nhập mảng bất kì');
-        let temp   = prompt('nhập kí tự bất kì')
+        let temp   = prompt('nhập kí tự bất kì');
         let arr = [];
-        function add(a){
-            for ( let i=0;i<=str.length;i++){
-                arr.push(str[i]);
+        function add(array,obj){
+            for ( let i=0;i<obj.length;i++){
+                array.push(obj[i]);
             }
         }
-        add(str)
-        function find(b){
-            for (let j=0;j<=arr.length;j++){
-                if(arr.indexOf(temp)){
-                    let dem=dem+1;
-                    return dem ;
+        add(arr,str);
+        function find(list, keyword){
+            let dem= 0;
+            for (let j=0;j<list.length;j++){
+                if(list[j]===keyword){
+                     dem=dem+1;
                 } 
             }
-            return -1 ;
+            return dem ;
         }
-        let kq=find(arr);
-        document.write('số lần xuất hiện của ' + temp + 'là ' +kq);
+        let kq=find(arr,temp);
+        if(kq!==0){
+            alert ('số lần xuất hiện ' + kq );
+        }else alert ('-1');
     </script>
 </body>
 </html>
