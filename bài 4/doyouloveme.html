@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <h1 style="position:absolute; left:220px; top:175px;">DOYOULOVEME</h1> 
+   <button id="yes" onclick="yesClick()" style="position:absolute; left:285px; top:235px;">Yes</button>
+   <button id="no"  onmouseover="noClick()" style="position:absolute; left:350px; top:235px;">No</button>
+   <script>
+       const SCREEN_WIDTH = window.innerWidth;
+       const SCREEN_HEIGHT = window.innerHeight;
+       function yesClick(){
+           alert('yes i love you ');
+       }
+       function noClick(){
+        let btnno = document.getElementById('no');
+        let randomleft = Math.floor(Math.random()*SCREEN_WIDTH);
+        let randomheight = Math.floor(Math.random()*SCREEN_HEIGHT);
+        document.getElementById('no').style.left=randomleft + 'px';
+        document.getElementById('no').style.top=randomheight + 'px';   
+        }
+
+
+          
+   </script>
+</body>
+</html>
+
+
+	
+	
+
