@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a = parseFloat(prompt(' nhập  a',''));
+       let b = parseFloat(prompt(' nhập  b',''));
+       let c = parseFloat(prompt(' nhập  c',''));
+       let D = (b*b) - (4* a *c);
+        if (D<0) {
+            alert('Phương trình vô nghiệm');
+
+            }else if (D>0){	
+
+            alert('nghiệm của phương trình là x1=:'+(-b + Math.sqrt( D )) / (2*a)+ ' và '+' x2 = ' +(-b - Math.sqrt( D )) / (2*a)) ;
+            
+            }else if (D==0) {
+
+            alert('nghiệm của phương trình là : '+ (-b/ (2*a)));
+        }
+</script>
+</body>
+</html>
