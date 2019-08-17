@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let doanhthu = parseFloat(prompt('Nhập doanh thu'));
+        let hoahong =  doanhthu * (10/100);
+        if (doanhthu > 30000000) {
+            hoahong = (30000000 * (10/100)) + (doanhthu - 30000000) * (20/100)
+            alert('Số tiền hoa hồng là ' + hoahong);
+
+        }else {
+            
+            alert('Số tiền hoa hồng là ' + hoahong);
+        }
+    </script>
+</body>
+</html>
