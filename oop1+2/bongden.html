@@ -7,6 +7,70 @@
     <title>Document</title>
 </head>
 <body>
-    
+        <button id="click" onclick="clickSwitchButton()">Tắt</button>
+        <img src="pic_bulbon.gif" id="lamp" style="top: 100 px ; left:150px">
+            <script>
+        
+                class switchbutton{
+                  constructor(status,lamp,htmlButton) {
+                      this.status = status ;
+                      this.lamp = lamp;
+                      this.htmlButton = htmlButton;
+                    }
+        
+                    setButton(htmlButton){
+                        this.htmlButton= htmlButton;
+                    }
+                    connetTolamp(lamp){
+                        this.lamp = lamp ;
+                    }
+                    switchoff(){
+                            this.status = false ; 
+                            this.htmlButton.innerHTML="Bật";
+                            this.lamp.Turnoff();
+                            }
+                    switchon(){
+                            this.status =true ;
+                            this.htmlButton.innerHTML="Tắt";
+                            this.lamp.Turnon();
+                        }
+                }
+                
+                class ElectricLamp {
+                    constructor(status,htmlImg) {
+                        this.status = false ;
+                        this.htmlImg= htmlImg;
+                    }
+                    
+                    setHtmlImg(htmlImg){
+                        this.htmlImg=htmlImg;
+                    }
+                    
+                    Turnoff(){
+                        this.status = false ;
+                        this.htmlImg.src="pic_bulboff.gif";
+                        }
+                    Turnon(){
+                        this.status =true ;
+                        this.htmlImg.src="pic_bulbon.gif";
+                        }
+                }
+        
+                let lampImg = document.getElementById("lamp");
+                let lamp = new ElectricLamp(true,lampImg);
+                
+                let btnHtml= document.getElementById("click");
+                let button = new switchbutton(true,lamp,btnHtml);
+            
+                function clickSwitchButton(){
+                    if (button.status)
+                        button.switchoff();
+                    else
+                        button.switchon();
+                }
+               
+            </script>
+        
+        
 </body>
 </html>
