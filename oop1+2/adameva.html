@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class apple{
+            constructor(weight){
+                this.weight = 10 ;
+            }
+            Decrease(){
+                this.weight-- ;
+            }
+            isempty(){
+             return this.weight > 0 ? true :false ;
+            }
+            getweight(){
+                this.weight = weight ;
+            }
+        }
+        class human {
+            constructor(name,gender,weight){
+                this.name = name ;
+                this.gender = gender ;
+                this.weight = weight ;
+            }
+            // Appleconnectohuman(apple){
+            //     this.apple = apple ;
+            
+            ismale(){
+                return this.gender ;
+            }
+            checkapple(aa){
+              return aa.isempty();
+            }
+            eatapple(aa){
+                if(this.checkapple(aa)){
+                    this.weight++
+                   aa.Decrease();
+                }else alert ('không ăn');
+            }
+            getname(){
+                return this.name  = name;
+            }
+            setname(a){
+                this.name = a ;
+            }
+            getweight(){
+                return this.weight =weight ;
+            }
+            setweight(b){
+                this.weight = b;
+            }
+        }
+        let adam= new human ('adam',true,60);
+        let eva = new human ('eva',false,55);
+        let app = new apple ();
+        // adam.Appleconnectohuman(app);
+        // eva.Appleconnectohuman(app);
+      
+        document.write('tôi tên là '+adam.name+' tôi nặng '+ adam.weight +'</br>' );
+        adam.eatapple(app);
+        document.write('sau khi ăn táo tôi nặng:' + adam.weight);
+
+    </script>
+</body>
+</html>

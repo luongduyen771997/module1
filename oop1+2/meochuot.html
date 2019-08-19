@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button  id= 'keep' onclick="keep()">keepRAt</button> <hr>
+    <script>
+        class Rat{
+            constructor(name,weight,speedrat,alive){
+                this.name = name ;
+                this.weight = weight ;
+                this.speedrat = speedrat ;
+                this.alive = alive ;
+            }
+            say(){
+                alert(' chít chít ');
+            }
+            getspeed(){
+                return this.speed ;
+            }
+            getalive(){
+                return this.alive  ;
+            }
+            
+        }
+        class Cat{
+            constructor(name,weightcat,speedcat){
+                this.name = name ;
+                this.weightcat = weightcat ;
+                this.speedcat =speedcat ;
+            }
+            RatconnettoCat(rat){
+                this.rat = rat
+            }
+            say(){
+                alert('meo meo')
+            }
+            eat(){
+            
+                alert('ngon quá')
+            }
+            getweightcat(){
+                this.weightcat = this.weightcat + this.rat.weight;
+            }
+            keepRat(){
+                if(this.speedcat > this.rat.speedrat && this.rat.getalive()===true){
+                    let dem = 0 ;
+                    dem += 1;
+                    this.eat();
+                    this.getweightcat();
+                    // this.weightcat+=this.rat.weight;
+                }else alert ('không ăn ');
+            }
+        }  
+        let tom = new Cat('tommeo',15,20) ;
+        let jerry = new Rat ('jerry',3,10,false);
+        tom.RatconnettoCat(jerry);
+       
+        document.write('tên : '+jerry.name+ ' cân nặng : ' + jerry.weight + ' tốc độ '+jerry.speedrat + '</br>');
+        document.write('tên : ' +tom.name+ ' cân nặng: ' + tom.weightcat + ' tốc độ: ' + tom.speedcat);
+        console.log(tom)
+        function keep(){
+            tom.keepRat()
+           
+            document.write('khối lượng mèo sau khi ăn chuột ' + tom.weightcat);
+        }
+        
+        
+    </script>
+</body>
+</html>
