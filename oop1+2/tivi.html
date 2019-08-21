@@ -8,34 +8,55 @@
 </head>
 <body>
     <script>
-        class Remote{
-            constructor(keyword){
-                this.keyword = keyword ;
+        class Remote {
+            constructor (id){
+                this.id = id;
             }
-                changechannel(){
-                    
-                }
-                changevolumte(){
-
-                }
+            connecttoTV(tivi){
+                this.tivi = tivi;
+            }
+            changechanel(numchanel){
+                this.tivi.changechaneltv(numchanel)
+            }
+            changevol(){
+                    this.tivi.changevolumntv();
+                } 
+              
+            
+            changestatus(){
+                this.tivi.onOFF();
+            }
         }
         class Tivi {
-            constructor(status){
-                this.status = status ;
+            constructor (chanel,vol,status){
+                this.chanel = chanel;
+                this.vol = vol;
+                this.status = status;
             }
-                RemoteconnecttoTvi(remote){
-                    this.remote = remote ;
-                }
-                TurnOnTivi(){
-                    this.status = !status ;
-                }
-                changechannel7(){
-
-                }
-                changgechannel3(){
-
-                }
+            changechaneltv(chanelnew){
+                this.chanel = chanelnew;
+            }
+            changevolumntv(){
+                this.vol+=2;
+            }
+            onOFF(){
+                this.status = this.status;
+            }
         }
+        let objtv = new Tivi (0,30,true);
+
+        let objremo = new Remote ('remotenokia');
+        objremo.connecttoTV(objtv);
+
+        if (objtv.status === false){
+          
+            document.write('kênh hiện tại ' + objtv.chanel + '</br>');
+            objremo.changechanel(7);
+            objremo.changevol();
+            document.write ('kênh sau chuyển ' + objtv.chanel + ' vol sau khi tăng ' + objtv.vol + ' trạng thái ' + objtv.status);
+          
+        } else alert ('turnonTV');
+       
         
     </script>
 </body>
