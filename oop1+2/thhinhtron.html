@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Circle {
+            constructor ( radius,color){
+                this.radius = radius;
+                this.color = color;
+            }
+            getRadius(){
+                return radius;
+            }
+            setRadius(r){
+                this.radius = r;
+            }
+            getArea(){
+                let area = this.radius * this.radius * 3.14
+                return area;
+            }
+        }
+        let num = +prompt('nhập bán kính');
+        let rs = new Circle(num);
+        rs.getArea();
+        document.write ('diện tích hình tròn là ' + rs.getArea());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class circle {
+           constructor(top,left,radius){
+            this.top = top;
+            this.left=left;
+            this.radius=radius;
+           }
+            gettop(){
+               return this.top;
+           }
+            settop(x){
+               this.top = x;
+           }
+            getleft(){
+               return this.left;
+           }
+            setleft(y){
+               this.left = y;
+           }
+           getradius(){
+               return this.radius;
+           }
+           setradius(z){
+               this.radius=z;
+           }
+            createCanvas(){
+            let canvas = document.createElement("canvas");
+            canvas.Width= 1000;
+            canvas.Height= 800;
+            canvas.style = "border: 1px solid red;";
+            let context= canvas.getContext("2d");
+            context.arc(this.top,this.left,this.radius,0,2*Math.PI);
+            context.stroke();
+            document.body.insertBefore(canvas,document.body.firstChild);
+        }
+       } 
+       let num1= +prompt('nhập top');
+       let num2= +prompt('nhập left');
+       let num3= +prompt('nhập radius')
+       let result = new circle();
+       
+       result.settop(num1);
+       result.setleft(num2);
+       result.setradius(num3);
+       result.createCanvas();
+    </script>
+</body>
+</html>
