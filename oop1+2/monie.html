@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mobie {
+            constructor (battery,type,status){
+                this.battery = battery;
+                this.type = type;
+                this.status = status;
+                this.messege = {
+                    writting:[],
+                    recceived:[],
+                    sent:[]
+                }
+            }
+            getCheckstatus(){
+                return this.status ? true : false;
+            }
+            getOnOff(){
+                this.status = !this.status;
+            }
+            getChangebattery(){
+                this.battery = 100;
+            }
+            getSendmessege(messege){
+                this.messege.sent.push(messege);
+            }
+            getReceivemessege(messege){
+                this.messege.recceived.push(messege);
+            }
+        }
+        let Nokia = new Mobie(20,'Nokia',true);
+        let Iphone = new Mobie(90,'Iphone',false);
+        console.log (Nokia.getCheckstatus());
+        let mes = 'Finghting';
+        Iphone.getSendmessege(mes);
+        Nokia.getReceivemessege(mes);
+        console.log(Iphone.getSendmessege());
+        
+    </script>
+</body>
+</html>
