@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Battery {
+            constructor (energy){
+                this.energy = energy;
+            }
+            getEnergy(){
+                return this.energy;
+            }
+            setEnergy(energy){
+                this.energy = energy;
+            }
+            getDecreaseEnergy(){
+                if (this.energy >0){
+                    this.energy--;
+                }
+            }
+        }
+        class FlashLamp {
+            constructor(status,battery){    
+                this.status = status;
+                this.battery = battery;
+            }
+            SetBattery(battery){
+                this.battery = battery;
+            }
+            getBatteryInfo(){
+                return this.battery.getEnergy();
+            }
+            Getlight(){
+                if(this.status){
+                    alert ('lighting');
+                }
+                else
+                    alert ('Not linghting');
+            }
+            GetTurnOn(){
+                return this.status = true;
+            }
+            GetTurnOff(){
+                return this.status = false;
+            }
+        }
+        let battery = new Battery();
+        battery.setEnergy(10);
+
+        let flashLamp = new FlashLamp();
+        flashLamp.SetBattery(battery);
+
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+        flashLamp.Getlight();
+
+        document.write("Turn on<br/>")
+        flashLamp.GetTurnOn();
+        flashLamp.Getlight();
+        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+        document.write("Turn off<br/>")
+        flashLamp.GetTurnOff();
+        flashLamp.Getlight();
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
